@@ -1,0 +1,83 @@
+<meta charset="UTF-8">
+
+<h1>ADIVINHE O NÚMERO DE 1 A 10</h1>
+
+<input/>
+<button>Compare com o meu segredo</button>
+
+<script>
+	
+	var input = document.querySelector("input");
+	input.focus();
+	
+	function sorteiaNumero() {
+	
+		return Math.round(Math.random() * 10)
+	
+	}
+	
+	function carregaNumeros(quantidade){
+	
+		var posicao = 1;
+		var numeros = [];		
+		
+		while (posicao <= quantidade){
+		
+			var numeroAleatorio = sorteiaNumero();
+			
+			if(numeroAleatorio != 0){
+			
+				var repetido = false;
+								
+				for (var repeticao = 0; repeticao < numeros.length; repeticao++){
+				
+					if (numeros[repeticao]== numeroAleatorio){
+						repetido = true;
+						break;
+					}
+				}
+				
+				if(repetido == false){
+				
+					numeros.push(numeroAleatorio);
+					posicao++;
+				
+				}
+			}
+		}				
+
+		return numeros;
+		
+	}
+		
+	var segredos = carregaNumeros(3);	
+	console.log(segredos)
+		
+	function verifica(){
+		
+		var achou = false;
+		
+		for (var posicao = 0; posicao < segredos.length; posicao++){
+		
+			if(input.value == segredos[posicao]){
+				
+				alert("Você ACERTOU!");
+				posicao = segredos.length
+				achou = true;
+			}
+		}
+		
+		if(achou == false) {
+			alert("Você ERROU!");
+		}
+		
+		input.value = ""; //limpa o campo do input
+		input.focus(); //deixa o campo que recebe os valores com o cursor
+
+	}
+
+	var botão = document.querySelector("button");
+	
+	botão.onclick = verifica; //não precisa do ()
+	
+</script>

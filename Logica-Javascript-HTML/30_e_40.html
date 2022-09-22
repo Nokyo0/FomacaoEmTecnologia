@@ -1,0 +1,28 @@
+<meta charset="UTF-8">
+
+<script>
+	
+	function pulaLinha(){
+		document.write("<br>");
+	}
+	
+	function mostra(frase){
+		document.write(frase);
+		pulaLinha();
+	}
+	
+	var numeroMinimo = 30;
+	var numeroMaximo = 40;
+	var numero = numeroMinimo
+	
+	
+	while(numero <= numeroMaximo){
+		if(numero != 33 && numero != 37){
+			mostra(numero);			
+		}
+		numero = numero +1;
+	}
+	
+	mostra("FIM");
+		
+</script>

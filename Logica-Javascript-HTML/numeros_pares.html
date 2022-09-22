@@ -1,0 +1,25 @@
+<meta charset="UTF-8">
+
+<script>
+	
+	function pulaLinha(){
+		document.write("<br>");
+	}
+	
+	function mostra(frase){
+		document.write(frase);
+		pulaLinha();
+	}
+	
+	var numero = 0;
+	
+	var numeroLimite = prompt("Vamos descobrir todos os números pares de uma sequência. Informe o número limite para o cáculo.");
+	
+	while(numero <= numeroLimite){
+		mostra(numero);
+		numero = numero +2;
+	}
+	
+	mostra ("FIM");
+		
+</script>

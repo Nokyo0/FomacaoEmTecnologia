@@ -1,0 +1,32 @@
+<meta charset="UTF-8">
+
+<script>
+	
+	function pulaLinha(){
+		document.write("<br>");
+	}
+	
+	function mostra(frase){
+		document.write(frase);
+		pulaLinha();
+	}
+	
+	alert ("Vamos listar os números da sequência de Fibonacci?");
+	var numeroLimite = parseInt(prompt("Digite o número máximo para a sequência:"));
+	
+	var primeiroNumero = 1;
+	var segundoNumero = 0;
+	var serieFibonacci = 0;
+	
+	mostra ("<h1>SERIE FIBONACCI ATÉ " + numeroLimite + "</h1>");
+	
+	while(serieFibonacci <= numeroLimite){
+		mostra(serieFibonacci);
+		serieFibonacci = primeiroNumero + segundoNumero;
+		primeiroNumero = segundoNumero;
+		segundoNumero = serieFibonacci;
+	}
+	
+	mostra ("FIM");
+		
+</script>

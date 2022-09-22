@@ -1,0 +1,30 @@
+<meta charset="UTF-8">
+
+<h1>ADIVINHE O NÚMERO</h1>
+
+<input/>
+<button>Compare com o meu segredo</button>
+
+<script>
+	
+	var segredo = Math.round(Math.random() * 10);	
+	var valorInformado = document.querySelector("input");
+	
+	valorInformado.focus();
+	
+	function verifica(){
+		if(valorInformado.value == segredo){
+			alert("Você ACERTOU!");
+		}else{
+			alert("Você ERROU!");
+		}
+		
+		valorInformado.value = ""; //limpa o campo do input
+		valorInformado.focus(); //deixa o campo que recebe os valores com o cursor
+	}
+
+	var botão = document.querySelector("button");
+	
+	botão.onclick = verifica; //não precisa do ()
+	
+</script>

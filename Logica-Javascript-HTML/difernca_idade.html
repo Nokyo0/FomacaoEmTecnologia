@@ -1,0 +1,31 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha() {
+
+        document.write("<br>");
+    }
+	
+	function exibeTitulo(texto) {
+		document.write("<h1>" + texto + "</h1>");
+		pulaLinha()
+	}
+	
+	function exibeParágrafo(texto) {
+		document.write("<p>" + texto + "</p>");
+		pulaLinha();
+	}
+	
+	var idadeMinha = 35;
+	var idadeOutro = 23;
+	var difIdade = idadeMinha - idadeOutro;
+	
+	var titulo = "CÁLCULO DE DIFERENÇA DE IDADE";
+	
+	exibeTitulo(titulo);
+	exibeParágrafo("Minha idade é: " + idadeMinha);
+	exibeParágrafo("A idade do outro é: " + idadeOutro);
+	exibeParágrafo("A diferença de nossas idades é: " + difIdade);
+
+</script>

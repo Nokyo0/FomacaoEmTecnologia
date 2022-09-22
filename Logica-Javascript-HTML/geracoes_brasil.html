@@ -1,0 +1,32 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha() {
+
+        document.write("<br><br>");
+    }
+	
+	function exibeTitulo(texto) {
+		document.write("<h1>" + texto + "</h1>");
+	}
+	
+	function exibeParágrafo(texto) {
+		document.write(texto);
+		pulaLinha();
+	}
+	
+	var descBrasil = 1500;
+	var anoAtual = 2022;
+	var idadeBrasil = anoAtual-descBrasil;
+	var idadeMedPais = 28;
+	var gerBrasil = idadeBrasil / idadeMedPais;
+		
+	var titulo = "CÁLCULO DE GERAÇÕES DO BRASIL";
+	
+	exibeTitulo(titulo);
+	exibeParágrafo("O Brasil foi descober em <b>" + descBrasil + "</b>!");
+	exibeParágrafo("Considerando que estamos no ano de <b>" + anoAtual + "</b> (O Brasil tem <b>" + idadeBrasil + "</b> anos!) e a média de idade que um casal tem filhos é de <b>" + idadeMedPais + "</b> anos.");
+	exibeParágrafo("A média total de gerações no Brasil até hoje é de <b>" + Math.round(gerBrasil) + "</b> gerações!");
+
+</script>
